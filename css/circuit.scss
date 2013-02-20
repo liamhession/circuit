@@ -1,0 +1,46 @@
+$arrow-color: olivedrab;
+$arrow-size: 30px;
+
+$value-color: lime;
+$value-size: 50px;
+
+$units-color: navy;
+$units-size: 14px;
+
+.arrow-up {
+	width: 0; 
+	height: 0; 
+	border-left: $arrow-size solid transparent;
+	border-right: $arrow-size solid transparent;
+	
+	border-bottom: $arrow-size solid $arrow-color;
+}
+
+.arrow-down {
+	width: 0; 
+	height: 0; 
+	border-left: $arrow-size solid transparent;
+	border-right: $arrow-size solid transparent;
+	
+	border-top: $arrow-size solid $arrow-color;
+}
+
+.variable-display {
+	display: inline-block;
+}
+
+.variable-value {
+	color: $value-color;
+	display: inherit;
+	font: {
+	  size: $value-size;
+	}
+}
+
+.variable-units {
+	color: $units-color;
+	display: inherit;
+	font: {
+	  size: $units-size;
+	}
+}    

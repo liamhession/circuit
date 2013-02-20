@@ -1,11 +1,38 @@
 <html>
 <head>
+<link rel="stylesheet" type="text/css" href="css/circuit.css">
 </head>
 <body>
-
-
+<div id="circuit-canvas">
+</div>
+<div class="arrow-up" id="up-ohms"></div>
+<div class="variable-display"><div id="ohm-value" class="variable-value">500</div><div class="variable-units">ohms</div></div>
+<div class="arrow-down" id="down-ohms"></div>
 <script src="../common/js/jquery.min.js"></script>
 <script src="../common/js/raphael.js"></script>
 <script src="js/circuit.js"></script>
+<script>
+  $(document).ready(function() {
+    var paper = Raphael("circuit-canvas", 400, 300); 
+    var resistorValue = 500;
+
+    // Draw the default resistor
+    paper.resistor(resistorValue, 100, 100);
+
+    /// To update the drawing and displayed value
+    function updateResistorValue(ohmChange) {
+      resistorValue += ohmChange;
+      $('#ohm-value').html(resistorValue);
+
+      paper.clear();
+      paper.resistor(resistorValue, 100, 100);
+    };
+
+
+    var upArrow = $('#up-ohms').click(function() {updateResistorValue(100);});
+    var downArrow = $('#down-ohms').click(function() {updateResistorValue(-100);});
+    
+  });
+</script>
 </body>
 </html>

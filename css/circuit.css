@@ -1,0 +1,26 @@
+.arrow-up {
+  width: 0;
+  height: 0;
+  border-left: 30px solid transparent;
+  border-right: 30px solid transparent;
+  border-bottom: 30px solid olivedrab; }
+
+.arrow-down {
+  width: 0;
+  height: 0;
+  border-left: 30px solid transparent;
+  border-right: 30px solid transparent;
+  border-top: 30px solid olivedrab; }
+
+.variable-display {
+  display: inline-block; }
+
+.variable-value {
+  color: lime;
+  display: inherit;
+  font-size: 50px; }
+
+.variable-units {
+  color: navy;
+  display: inherit;
+  font-size: 14px; }
